@@ -48,10 +48,11 @@ const texts = [
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
+const randomIndTxt = Math.floor(Math.random() * texts.length);
 
 const elementImg = document.getElementById("avatar-random");
 elementImg.src = images[randomInd];
 elementImg.alt = desc[randomInd];
 
 const elementTxt = document.getElementById("text-random");
-elementTxt.textContent = texts[randomInd];
+elementTxt.textContent = texts[randomIndTxt];
