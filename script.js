@@ -1,13 +1,58 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+function showTab(name) {
+    const tabs = document.querySelectorAll('main section');
+    tabs.forEach(tab => tab.style.display = 'none');
+
+    const target = document.getElementById('tab-' + name);
+    target.style.display = 'flex';
+
+    target.style.animation = 'none';
+    target.offsetHeight; // força o browser a resetar
+    target.style.animation = '';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('home');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('home');
+
+    const titulo = document.getElementById('titleCard');
+    titulo.addEventListener('click', () => {
+        const sfx = new Audio('./audios/splat.mp3');
+        sfx.play();
+    });
+
+    const audio = document.getElementById('audio');
+    audio.volume = 0.3;
+});
+
+function togglePlay() {
+    const audio = document.getElementById('audio');
+    const cd    = document.getElementById('cd');
+
+    if (audio.paused) {
+        audio.play();
+        cd.classList.add('playing');
+    } else {
+        audio.pause();
+        cd.classList.remove('playing');
+    }
+}
+
+
 function createBubble() {
+    if (document.querySelectorAll('.bubble').length >= 15) return;
+
     const bubble = document.createElement('div');
     bubble.classList.add('bubble');
 
     const size = Math.random() * 60 + 10;
-    bubble.style.width  = size + 'px';
-    bubble.style.height = size + 'px';
-    bubble.style.left   = Math.random() * 100 + 'vw';
+    bubble.style.width           = size + 'px';
+    bubble.style.height          = size + 'px';
+    bubble.style.left            = Math.random() * 100 + 'vw';
     bubble.style.animationDuration = Math.random() * 8 + 5 + 's';
     bubble.style.animationDelay    = Math.random() * 4 + 's';
 
@@ -44,7 +89,12 @@ const texts = [
     "'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
     "'I think that spaces should be home for everyone!'",
     "'Oh dear! ...ok sorry for that.'",
-    "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'"
+    "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
+    "'I am smart! Not really.. sorry..'",
+    "'Rygar, get back here!'",
+    "'Rogy, go the blueprint.. I need to do something about it..'",
+    "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
+    "'Darkon, stop thinking you are the main character throwing punchies!'"
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);

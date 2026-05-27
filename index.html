@@ -8,42 +8,142 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="./imgs/zonialogow.svg">
-	<title>ZôniaWebsite - Homepage</title>
+	<title>ZôniaWebsite</title>
 </head>
 <body>
 	<header>
-		<h1 class="animated-gradient title">ZôniaLabs_</h1>
+		<h1 id="titleCard" class="animated-gradient title">ZôniaLabs_</h1>
 	</header>
 	<nav>
 		<div class="nav-links">
-			<a href="./pages/projects.html">projects</a>
-			<a href="./pages/comission.html">comission</a>
-			<a href="./pages/links.html">links</a>
+			<button onclick="showTab('home')">home</button>
+			<button onclick="showTab('projects')">projects</button>
+			<button onclick="showTab('comission')">comission</button>
+			<button onclick="showTab('links')">links</button>
 		</div>
 	</nav>
+	<div class="cdPlayer">
+    <div class="cd" id="cd">
+        <img src="./imgs/darkonCD.png" alt="CD">
+    </div>
+    <div class="controls">
+        <button onclick="togglePlay()">> / ||</button>
+    </div>
+    <audio id="audio" src="./audios/welcomecitydeltarune.ogx" loop autoplay></audio>
+</div>
 	<main>
-		<aside>
-			<h2>Welcome to my lab, <strong>@User</strong>!</h2>
-			<img id="avatar-random" src="./imgs/faces/darkonIcon.png" alt="Darkon smiling to the camera.">
-			<p id="text-random">"'We gotta pull this through!'"</p>
-		</aside>
-		<article>
-			<p><i>Uhhhh..</i> hi! I don't know how to introduce myself. Aaaanyway:</p>
-			<p>I'm Darkgrey, I am 22 years old, big guy, <i>freaking</i> stupid one, can't think straight.</p>
-			<p>I am a artist on BluekSky, making content about furries, being my main sonas or not.</p>
-			<br>
-			<p>For myself, my real <a href="./vids/mynameisgustavo.mp4" class="hide">name</a> is <span class="censored">notTelling</span>, currently studying at IESB college, about Systems Analysis and Development.</p>
-			<p>I don't know when is it going to end, hopefully soon. Kids don't do colleges.</p>
-			<br>
-			<p>I play a variety of games, being: <strong>Minecraft, Roblox, VRChat, garry's mod, WEBFISHING',</strong></p>
-			<p><strong>Rhythm Doctor, R.E.P.O, TF2, Baldi's Basics</strong>, anyway, you name it.</p>
-			<br>
-			<p>Thanks for stopping by! <i>wags</i></p>
-		</article>
+		<section id="tab-home">
+			<aside>
+				<h2>Welcome to my lab, <strong>@User</strong>!</h2>
+				<img id="avatar-random" src="./imgs/faces/darkonIcon.png" alt="Darkon smiling to the camera.">
+				<p id="text-random">"'We gotta pull this through!'"</p>
+			</aside>
+			<article>
+				<p><i>Uhhhh..</i> hi! I don't know how to introduce myself. Aaaanyway:</p>
+				<p>I'm Darkgrey, I am 22 years old, big guy, <i>freaking</i> stupid one, can't think straight.</p>
+				<p>I am a artist on BluekSky, making content about furries, being my main sonas or not.</p>
+				<br>
+				<p>For myself, my real <a href="./vids/mynameisgustavo.mp4" class="hide">name</a> is <span class="censored">notTelling</span>, currently studying at IESB college, about Systems Analysis and Development.</p>
+				<p>I don't know when is it going to end, hopefully soon. Kids don't do colleges.</p>
+				<br>
+				<p>I play a variety of games, being: <strong>Minecraft, Roblox, VRChat, garry's mod, WEBFISHING',</strong></p>
+				<p><strong>Rhythm Doctor, R.E.P.O, TF2, Baldi's Basics</strong>, anyway, you name it.</p>
+				<br>
+				<p>Thanks for stopping by! <i>wags</i></p>
+			</article>
+		</section>
+		<section id="tab-projects">
+			<aside>
+				<h2>Welcome to <strong>Projects</strong> tab!</h2>
+				<svg class="size customSVG" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+					<path d="M22,19C22,20.097 21.097,21 20,21L4,21C2.903,21 2,20.097 2,19L2,5C2,3.903 2.903,3 4,3L9,3L11,6L20,6C21.097,6 22,6.903 22,8L22,19Z" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+				</svg>
+				<p>'There is a lot of work to do..'</p>
+			</aside>
+			<article>
+				<div class="container">
+					<div style="display: flex; align-items: center; justify-content: space-between;">
+						<p>Punch Me Out FURY! 🥊</p>
+						<a href="" target="_blank">
+							<button>ProjectPage</button>
+						</a>
+					</div>
+				</div>
+				<p><strong>Description:</strong> Game about running around the world as Rogy or Darkon, fighting a lot of big and small enemies around the town! Can you take everyone out or will you be the one out?</p>
+				<div class="container">
+					<div style="display: flex; align-items: center; justify-content: space-between;">
+						<p>FishMeHook 🐟</p>
+						<a href="" target="_blank">
+							<button>ProjectPage</button>
+						</a>
+					</div>
+				</div>
+				<p><strong>Description:</strong> Game about fishing on the wild! Go to a forest, go to a snow biome.. or even on a pool? <i>(is that even legal?)</i> In any way, fish where you want, with friends!</p>
+			</article>
+		</section>
+		<section id="tab-comission">
+			<aside>
+				<h2>Welcome to <strong>Comission</strong> tab!</h2>
+				<svg class="size customSVG" width="100%" height="100%" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;">
+					<path d="M20.59,13.41L13.42,20.58C13.045,20.955 12.536,21.167 12.005,21.167C11.474,21.167 10.965,20.955 10.59,20.58L2,12L2,2L12,2L20.59,10.59C21.36,11.365 21.36,12.635 20.59,13.41Z" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+					<path d="M7,7L7.01,7" style="fill:none;fill-rule:nonzero;stroke:black;stroke-width:2px;"/>
+				</svg>
+				<p id="text-random">'Check it out, I have cool things for you!'</p>
+				<br>
+				<p><strong>IF</strong> you do have questions, please seek out on:</p>
+				<p><strong>Blueksy: </strong><a href="https://bsky.app/profile/darkgreyrai.bsky.social">Darkgrey@BSKY</a></p>
+				<p><strong>Discord: </strong>darkgrey_</p>
+				<p><i>[ I will NOT accept random that will say nothing. ]</i></p>
+			</aside>
+			<article>
+				<div class="container">
+					<img src="./imgs/panel1.png" alt="Panel comission about minecraft." class="size">
+					<p>Here is my first panel, being <strong>Minecraft Comissions!</strong></p>
+					<p>You can get yourself a: <strong>Regular Minecraft Skin</strong>, being flat only, no animations and stuff.</p>
+					<p>OR, you can get a fully animated one! Ain't that cool?</p>
+				</div>
+				<div class="container">
+					<img src="./imgs/panel2.png" alt="Panel comission about minecraft." class="size">
+					<p>And here is my second panel, being <strong>Art Comissions!</strong></p>
+					<p>You can get yourself some random art about your sona or whatever, for whatever price you may want!</p>
+					<p>I'm doing what they call PWYW, <i>pay what you want.</i></p>
+				</div>
+			</article>
+		</section>
+		<section id="tab-links">
+			<aside>
+				<h2>Welcome to <strong>Links</strong> tab!</h2>
+				<img src="./imgs/zonialogow.svg" class="size">
+				<p>'Where.. everything is stored and found, I think..'</p>
+			</aside>
+			<article>
+				<div class="nav-buttons">
+					<a href="https://bsky.app/profile/darkgreyrai.bsky.social" target="_blank">
+						<img src="https://cdn.simpleicons.org/bluesky/ffffff" alt="Bluesky">
+						<p>Bluesky</p>
+					</a>
+					<a href="https://trello.com/b/5Y8zofkp/zoniacomms" target="_blank">
+						<img src="https://cdn.simpleicons.org/trello" alt="Trello">
+						<p>Trello</p>
+					</a>
+					<a href="https://github.com/DarkraiNemo" target="_blank">
+						<img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub">
+						<p>GitHub</p>
+					</a>
+				</div>
+				<br>
+				<div class="nav-buttons">
+					<a href="https://www.roblox.com/users/2541819975/profile" target="_blank">
+						<img src="https://cdn.simpleicons.org/roblox/ffffff" alt="Roblox">
+						<p>Roblox</p>
+					</a>
+				</div>
+			</article>
+		</section>
 	</main>
 	<footer>
 		<small>&copy; <span id="year"></span> ── ZôniaLabs</small>
 	</footer>
-	<script src="./scripts/script.js"></script>
+	<script src="./script.js"></script>
 </body>
 </html>
