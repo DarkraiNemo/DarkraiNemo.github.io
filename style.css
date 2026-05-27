@@ -1,5 +1,5 @@
 :root {
-    color: white;
+    color-scheme: light dark;
     background: #201470;
     background: linear-gradient(180deg,rgba(32, 20, 112, 1) 0%, rgba(13, 11, 61, 1) 100%);
     background-attachment: fixed;
@@ -61,14 +61,7 @@ nav {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
     padding: 5px;
-    background: rgba(80, 95, 235, 0.24);
 }
 
 main {
@@ -124,27 +117,6 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-section {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 100%;
-    animation: slideIn 0.3s ease;
-}
-
-
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* Custom Tags */
 
 .container {
@@ -174,31 +146,6 @@ section {
 .hide {
     color: white;
     text-decoration: none;
-}
-
-.cdPlayer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 8px;
-}
-
-.cd img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: block;
-    transform-origin: center center;
-}
-
-.cd.playing {
-    animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
 }
 
 /* Nav Links - Up Part */
@@ -243,23 +190,6 @@ section {
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.1);
     transition: background-color 0.3s;
-}
-
-.nav-links button {
-    background: none;
-    border: none;
-    color: white;
-    font-family: "Iceland", sans-serif;
-    font-size: large;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.nav-links button:hover {
-    background-color: #555;
-    transform: scale(1.2);
 }
 
 .nav-buttons a img {
@@ -348,10 +278,6 @@ section {
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
-    }
-
-    section {
-        flex-direction: column;
     }
 
     .animated-gradient {
