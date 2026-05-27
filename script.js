@@ -92,7 +92,7 @@ const texts = [
     "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
     "'I am smart! Not really.. sorry..'",
     "'Rygar, get back here!'",
-    "'Rogy, go the blueprint.. I need to do something about it..'",
+    "'Rogy, go get the blueprint.. I need to do something about it..'",
     "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
     "'Darkon, stop thinking you are the main character throwing punchies!'"
 ]
