@@ -161,37 +161,36 @@ Mousetrap.bind('b s k y', function() {
 
 const images = [
     "https://i.imgur.com/oJjxLAK.png",  // Dog
-"https://i.imgur.com/mWzDajl.png",  // Darkon
-"https://i.imgur.com/1fXFGYN.png",  // Nebulon
-"https://i.imgur.com/MchxPVW.png",  // Rogy
-"https://i.imgur.com/arJzBCL.png",  // Rygar
-"https://i.imgur.com/0mRuaJu.png"   // Deer
+    "https://i.imgur.com/mWzDajl.png",  // Darkon
+    "https://i.imgur.com/1fXFGYN.png",  // Nebulon
+    "https://i.imgur.com/MchxPVW.png",  // Rogy
+    "https://i.imgur.com/arJzBCL.png",  // Rygar
+    "https://i.imgur.com/0mRuaJu.png"   // Deer
 ]
 
 const desc = [
     "Dog smiling to the camera.",
-"Darkon smiling to the camera.",
-"Nebulong pondering on space.",
-"Rogy looking aside to a bird.",
-"Rygar rushing hour.",
-"Deer with a nice grim."
+    "Darkon smiling to the camera.",
+    "Nebulong pondering on space.",
+    "Rogy looking aside to a bird.",
+    "Rygar rushing hour.",
+    "Deer with a nice grim."
 ]
 
 const texts = [
     "'We gotta pull this through!'",
-"'AwruuUuUuuuu..! Wait, sorry..'",
-"'So.. if I add 2 + 2 on here... it should be 5, right?'",
-"'Thats.. not a good idea, honestly.'",
-"'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
-"'I think that spaces should be home for everyone!'",
-"'Oh dear! ...ok sorry for that.'",
-"'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
-"'I am smart! Not really.. sorry..'",
-"'Rygar, get back here!'",
-"'Rogy, go the blueprint.. I need to do something about it..'",
-"'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
-"'Darkon, stop thinking you are the main character throwing punchies!'",
-"''",
+    "'AwruuUuUuuuu..! Wait, sorry..'",
+    "'So.. if I add 2 + 2 on here... it should be 5, right?'",
+    "'Thats.. not a good idea, honestly.'",
+    "'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
+    "'I think that spaces should be home for everyone!'",
+    "'Oh dear! ...ok sorry for that.'",
+    "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
+    "'I am smart! Not really.. sorry..'",
+    "'Rygar, get back here!'",
+    "'Rogy, go the blueprint.. I need to do something about it..'",
+    "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
+    "'Darkon, stop thinking you are the main character throwing punchies!'"
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
