@@ -8,13 +8,25 @@ function showTab(name) {
     target.style.display = 'flex';
 
     target.style.animation = 'none';
-    target.offsetHeight; // força o browser a resetar
+    target.offsetHeight;
     target.style.animation = '';
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    showTab('home');
-});
+function dropFunc() {
+    document.getElementById("dropMenu").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     showTab('home');
@@ -50,9 +62,9 @@ function createBubble() {
     bubble.classList.add('bubble');
 
     const size = Math.random() * 60 + 10;
-    bubble.style.width           = size + 'px';
-    bubble.style.height          = size + 'px';
-    bubble.style.left            = Math.random() * 100 + 'vw';
+    bubble.style.width             = size + 'px';
+    bubble.style.height            = size + 'px';
+    bubble.style.left              = Math.random() * 100 + 'vw';
     bubble.style.animationDuration = Math.random() * 8 + 5 + 's';
     bubble.style.animationDelay    = Math.random() * 4 + 's';
 
@@ -63,46 +75,132 @@ function createBubble() {
 
 setInterval(createBubble, 600);
 
+var sfx = new Audio('./audios/weirdroutejingle.mp3');
+var sfx2 = new Audio('./audios/savepoint.mp3');
+sfx.preload = 'auto';
+
+Mousetrap.bind('h', function() {
+    sfx2.play();
+    alert("Going to Home tab.");
+    showTab('home');
+})
+
+Mousetrap.bind('p', function() {
+    sfx2.play();
+    alert("Going to Projects tab.");
+    showTab('projects');
+})
+
+Mousetrap.bind('c', function() {
+    sfx2.play();
+    alert("Going to Comission tab.");
+    showTab('comission');
+})
+
+Mousetrap.bind('l', function() {
+    sfx2.play();
+    alert("Going to Links tab.");
+    showTab('links');
+})
+
+Mousetrap.bind('up up down down left right left right', function() {
+    sfx.play();
+    alert("Konami code! So you know your way around..");
+});
+
+Mousetrap.bind('z o n i a', function() {
+    sfx.play();
+    alert("I serve only Darkon.")
+})
+
+Mousetrap.bind('d a r k g r e y', function() {
+    sfx.play();
+    alert("That's me. What were you thinking?")
+})
+
+Mousetrap.bind('s n y w y', function() {
+    sfx.play();
+    alert("Green giant! And.. nerd.");
+})
+
+Mousetrap.bind('p r o t o', function() {
+    sfx.play();
+    alert("White dragon that is dumb.");
+})
+
+Mousetrap.bind('d a r k o n', function() {
+    sfx.play();
+    alert("Well, it is me.. what do you want?");
+})
+
+Mousetrap.bind('r o g y', function() {
+    sfx.play();
+    alert("I will headbutt you if you annoy me again!!");
+})
+
+Mousetrap.bind('n e b u l o n', function() {
+    sfx.play();
+    alert("*happy plushie sounds*");
+})
+
+Mousetrap.bind('r y g a r', function() {
+    sfx.play();
+    alert("Aah! Oh, i-it's you..! Sorry...");
+})
+
+Mousetrap.bind('d e e r', function() {
+    sfx.play();
+    alert("I'll punch on your big stupid face if you do that again!");
+})
+
+Mousetrap.bind('b s k y', function() {
+    sfx2.play();
+    alert("So you wanna see my posts? Cool.");
+    window.open('https://darkgreyrai.bsky.social')
+})
+
 const images = [
-    "./imgs/faces/darkgreyIcon.png",
-    "./imgs/faces/darkonIcon.png",
-    "./imgs/faces/nebulonIcon.png",
-    "./imgs/faces/rogyIcon.png",
-    "./imgs/faces/rygarIcon.png",
-    "./imgs/faces/deergreyIcon.png"
+    "https://i.imgur.com/oJjxLAK.png",  // Dog
+"https://i.imgur.com/mWzDajl.png",  // Darkon
+"https://i.imgur.com/1fXFGYN.png",  // Nebulon
+"https://i.imgur.com/MchxPVW.png",  // Rogy
+"https://i.imgur.com/arJzBCL.png",  // Rygar
+"https://i.imgur.com/0mRuaJu.png"   // Deer
 ]
 
 const desc = [
     "Dog smiling to the camera.",
-    "Darkon smiling to the camera.",
-    "Nebulong pondering on space.",
-    "Rogy looking aside to a bird.",
-    "Rygar rushing hour.",
-    "Deer with a nice grim."
+"Darkon smiling to the camera.",
+"Nebulong pondering on space.",
+"Rogy looking aside to a bird.",
+"Rygar rushing hour.",
+"Deer with a nice grim."
 ]
 
 const texts = [
     "'We gotta pull this through!'",
-    "'AwruuUuUuuuu..! Wait, sorry..'",
-    "'So.. if I add 2 + 2 on here... it should be 5, right?'",
-    "'Thats.. not a good idea, honestly.'",
-    "'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
-    "'I think that spaces should be home for everyone!'",
-    "'Oh dear! ...ok sorry for that.'",
-    "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
-    "'I am smart! Not really.. sorry..'",
-    "'Rygar, get back here!'",
-    "'Rogy, go get the blueprint.. I need to do something about it..'",
-    "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
-    "'Darkon, stop thinking you are the main character throwing punchies!'"
+"'AwruuUuUuuuu..! Wait, sorry..'",
+"'So.. if I add 2 + 2 on here... it should be 5, right?'",
+"'Thats.. not a good idea, honestly.'",
+"'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
+"'I think that spaces should be home for everyone!'",
+"'Oh dear! ...ok sorry for that.'",
+"'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
+"'I am smart! Not really.. sorry..'",
+"'Rygar, get back here!'",
+"'Rogy, go the blueprint.. I need to do something about it..'",
+"'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
+"'Darkon, stop thinking you are the main character throwing punchies!'",
+"''",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
-const randomIndTxt = Math.floor(Math.random() * texts.length);
 
 const elementImg = document.getElementById("avatar-random");
 elementImg.src = images[randomInd];
 elementImg.alt = desc[randomInd];
+
+const randomIndTxt = Math.floor(Math.random() * texts.length);
 
 const elementTxt = document.getElementById("text-random");
 elementTxt.textContent = texts[randomIndTxt];
