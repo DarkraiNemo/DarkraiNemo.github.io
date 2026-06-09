@@ -103,7 +103,7 @@ Mousetrap.bind('l', function() {
     showTab('links');
 })
 
-Mousetrap.bind('up up down down left right left right', function() {
+Mousetrap.bind('up up down down left right left right b a', function() {
     sfx.play();
     alert("Konami code! So you know your way around..");
 });
