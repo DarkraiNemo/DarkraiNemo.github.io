@@ -113,12 +113,12 @@ window.addEventListener('load', function() {
 });
 
 const images = [
-    "https://imgur.com/oJjxLAK",  // Dog
-    "https://imgur.com/mWzDajl",  // Darkon
-    "https://imgur.com/1fXFGYN",  // Nebulon
-    "https://imgur.com/MchxPVW",  // Rogy
-    "https://imgur.com/arJzBCL",  // Rygar
-    "https://imgur.com/0mRuaJu"   // Deer
+    "https://i.imgur.com/oJjxLAK.png",  // Dog
+    "https://i.imgur.com/mWzDajl.png",  // Darkon
+    "https://i.imgur.com/1fXFGYN.png",  // Nebulon
+    "https://i.imgur.com/MchxPVW.png",  // Rogy
+    "https://i.imgur.com/arJzBCL.png",  // Rygar
+    "https://i.imgur.com/0mRuaJu.png"   // Deer
 ]
 
 const desc = [
