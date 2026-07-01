@@ -2,186 +2,123 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 function showTab(name) {
     const tabs = document.querySelectorAll('main section');
-    tabs.forEach(tab => tab.style.display = 'none');
+    
+    tabs.forEach(tab => {
+        tab.classList.remove('active');
+    });
 
     const target = document.getElementById('tab-' + name);
-    target.style.display = 'flex';
-
-    target.style.animation = 'none';
-    target.offsetHeight;
-    target.style.animation = '';
+    if (target) {
+        target.classList.add('active');
+    }
 }
 
 function dropFunc() {
     document.getElementById("dropMenu").classList.toggle("show");
 }
 
-window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-            }
-        }
+window.addEventListener('click', function(event) {
+    if (!event.target.closest('.containerBtn')) {
+        const dropdown = document.getElementById('dropMenu');
+        dropdown.classList.remove('show');
     }
-}
+});
 
 document.addEventListener('DOMContentLoaded', () => {
     showTab('home');
-
-    const titulo = document.getElementById('titleCard');
+    
+    const titulo = document.getElementById('silly');
     titulo.addEventListener('click', () => {
-        const splat = new Audio('./audios/splat.mp3');
-        splat.preload = 'auto';
-        splat.volume = 0.3;
-        playSound(splat);
+        const sfx = new Audio('./assets/sounds/splat.mp3');
+        sfx.play();
+        sfx.volume = 0.2;
     });
-
+    /*
     const audio = document.getElementById('audio');
-    audio.volume = 0.3;
-});
-
-function togglePlay() {
-    const audio = document.getElementById('audio');
-    const cd    = document.getElementById('cd');
-
-    if (audio.paused) {
-        audio.play();
-        cd.classList.add('playing');
+    if (audio) {
+        audio.volume = 0.1;
     } else {
-        audio.pause();
-        cd.classList.remove('playing');
+        console.log("There is no audio to be played, check your path file.")
     }
-}
-
-
-function createBubble() {
-    if (document.querySelectorAll('.bubble').length >= 15) return;
-
-    const bubble = document.createElement('div');
-    bubble.classList.add('bubble');
-
-    const size = Math.random() * 60 + 10;
-    bubble.style.width             = size + 'px';
-    bubble.style.height            = size + 'px';
-    bubble.style.left              = Math.random() * 100 + 'vw';
-    bubble.style.animationDuration = Math.random() * 8 + 5 + 's';
-    bubble.style.animationDelay    = Math.random() * 4 + 's';
-
-    document.body.appendChild(bubble);
-
-    bubble.addEventListener('animationend', () => bubble.remove());
-}
-
-setInterval(createBubble, 600);
-
-var weird = new Audio('./audios/weirdroutejingle.mp3');
-var save = new Audio('./audios/savepoint.mp3');
-weird.preload = 'auto';
-save.preload = 'auto';
-
-weird.volume = 0.2;
-save.volume = 0.2;
-
-function playSound(audio) {
-    audio.currentTime = 0;
-    audio.play();
-}
-
-/*
- * playSound(weird); - Weird Route;
- * playSound(save); - Save Point;
-*/
-
-Mousetrap.bind('h', function() {
-    playSound(save);
-    alert("Going to Home tab.");
-    showTab('home');
-})
-
-Mousetrap.bind('p', function() {
-    playSound(save);
-    alert("Going to Projects tab.");
-    showTab('projects');
-})
-
-Mousetrap.bind('c', function() {
-    playSound(save);
-    alert("Going to Comission tab.");
-    showTab('comission');
-})
-
-Mousetrap.bind('l', function() {
-    playSound(save);
-    alert("Going to Links tab.");
-    showTab('links');
-})
-
-Mousetrap.bind('up up down down left right left right b a', function() {
-    playSound(weird);
-    alert("Konami code! So you know your way around..");
+    */
 });
 
-Mousetrap.bind('z o n i a', function() {
-    playSound(weird);
-    alert("I serve only Darkon.")
-})
+const themes = {
+    dragon: {
+        '--color-white': '#F5F5F5',
+        '--color-light': '#C2F7FF',
+        '--color-main': '#505FEB',
+        '--color-secondary': '#333AA5',
+        '--color-accent': '#293097',
+        '--color-dark': '#202678',
+        '--color-black': '#202020',
+    },
+    dog: {
+        '--color-white': '#F9F3EF',
+        '--color-light': '#F4EDE9',
+        '--color-main': '#F9F3EF',
+        '--color-secondary': '#D2C1B6',
+        '--color-accent': '#456882',
+        '--color-dark': '#1B3C53',
+        '--color-black': '#202020'
+    },
+    deer: {
+        '--color-white': '#FFEDD8',
+        '--color-light': '#E9CEB0',
+        '--color-main': '#904928',
+        '--color-secondary': '#783C21',
+        '--color-accent': '#51210F',
+        '--color-dark': '#241008',
+        '--color-black': '#202020'
+    }
+};
 
-Mousetrap.bind('d a r k g r e y', function() {
-    playSound(weird);
-    alert("That's me. What were you thinking?")
-})
+const themeOrder = ['dragon', 'dog', 'deer'];
+let currentTheme = 'dragon';
 
-Mousetrap.bind('s n y w y', function() {
-    playSound(weird);
-    alert("Green giant! And.. nerd.");
-})
+function applyTheme(name) {
+    const root = document.documentElement;
+    const theme = themes[name];
+    Object.keys(theme).forEach(property => {
+        root.style.setProperty(property, theme[property]);
+    });
+}
 
-Mousetrap.bind('p r o t o', function() {
-    playSound(weird);
-    alert("White dragon that is dumb.");
-})
+function getNextTheme() {
+    const currentIndex = themeOrder.indexOf(currentTheme);
+    return themeOrder[(currentIndex + 1) % themeOrder.length];
+}
 
-Mousetrap.bind('d a r k o n', function() {
-    playSound(weird);
-    alert("Well, it is me.. what do you want?");
-})
+function updateThemeButton() {
+    const button = document.getElementById('themeToggleBtn');
+    if (!button) return;
+    const nextTheme = getNextTheme();
+    const labelMap = {
+        dragon: 'Dragon Theme',
+        dog: 'Dog Theme',
+        deer: 'Deer Theme'
+    };
+    button.textContent = labelMap[nextTheme] || 'Switch Theme';
+}
 
-Mousetrap.bind('r o g y', function() {
-    playSound(weird);
-    alert("I will headbutt you if you annoy me again!!");
-})
+function swColor() {
+    currentTheme = getNextTheme();
+    applyTheme(currentTheme);
+    updateThemeButton();
+}
 
-Mousetrap.bind('n e b u l o n', function() {
-    playSound(weird);
-    alert("*happy plushie sounds*");
-})
-
-Mousetrap.bind('r y g a r', function() {
-    playSound(weird);
-    alert("Aah! Oh, i-it's you..! Sorry...");
-})
-
-Mousetrap.bind('d e e r', function() {
-    playSound(weird);
-    alert("I'll punch on your big stupid face if you do that again!");
-})
-
-Mousetrap.bind('b s k y', function() {
-    playSound(sfx2);
-    alert("So you wanna see my posts? Cool.");
-    window.open('https://darkgreyrai.bsky.social')
-})
+window.addEventListener('load', function() {
+    applyTheme(currentTheme);
+    updateThemeButton();
+});
 
 const images = [
-    "https://i.imgur.com/oJjxLAK.png",  // Dog
-    "https://i.imgur.com/mWzDajl.png",  // Darkon
-    "https://i.imgur.com/1fXFGYN.png",  // Nebulon
-    "https://i.imgur.com/MchxPVW.png",  // Rogy
-    "https://i.imgur.com/arJzBCL.png",  // Rygar
-    "https://i.imgur.com/0mRuaJu.png"   // Deer
+    "https://imgur.com/oJjxLAK",  // Dog
+    "https://imgur.com/mWzDajl",  // Darkon
+    "https://imgur.com/1fXFGYN",  // Nebulon
+    "https://imgur.com/MchxPVW",  // Rogy
+    "https://imgur.com/arJzBCL",  // Rygar
+    "https://imgur.com/0mRuaJu"   // Deer
 ]
 
 const desc = [
@@ -206,7 +143,12 @@ const texts = [
     "'Rygar, get back here!'",
     "'Rogy, go the blueprint.. I need to do something about it..'",
     "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
-    "'Darkon, stop thinking you are the main character throwing punchies!'"
+    "'Darkon, stop thinking you are the main character throwing punchies!'",
+    "'* Proceed. '",
+    "'What if... no, that will not work.'",
+    "'I heard someone here.. who's there!?'",
+    "'So the triangle shape goes to.. the square hole!'",
+    "''",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
@@ -219,3 +161,16 @@ const randomIndTxt = Math.floor(Math.random() * texts.length);
 
 const elementTxt = document.getElementById("text-random");
 elementTxt.textContent = texts[randomIndTxt];
+
+var weird = new Audio('./assets/sounds/weirdroutejingle.mp3');
+weird.preload = 'auto';
+weird.volume = 0.2;
+
+var yay = new Audio('./assets/sounds/savepoint.mp3');
+yay.preload = 'auto';
+yay.volume = 0.2;
+
+Mousetrap.bind('z o n i a', function() {
+    weird.play();
+    alert("She do the work here. You should know her someday.");
+})
