@@ -173,4 +173,15 @@ yay.volume = 0.2;
 Mousetrap.bind('z o n i a', function() {
     weird.play();
     alert("She do the work here. You should know her someday.");
-})
+});
+
+Mousetrap.bind('p r o t o', function () {
+    weird.play();
+    alert("He's a goofy guy. Veery dumb. It's fine.")
+});
+
+Mousetrap.bind('s n y w y', function () {
+    weird.play();
+    alert("He's very nerd at stuff. He loves Sonic, and me.")
+});
+
