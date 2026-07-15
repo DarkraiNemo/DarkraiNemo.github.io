@@ -121,6 +121,20 @@ const images = [
     "https://i.imgur.com/0mRuaJu.png"   // Deer
 ]
 
+const gallery = [
+    "https://i.imgur.com/7g1H5IK.gif", // Cloud
+    "https://i.imgur.com/DBBlXff.gif", // D4RK
+    "https://i.imgur.com/vZtlhLo.gif", // Doggie
+    "https://i.imgur.com/enaWV8h.gif", // Darkon
+    "https://i.imgur.com/6w3Ctup.gif", // Deer
+    "https://i.imgur.com/gIXbHat.gif", // May
+    "https://i.imgur.com/G6ly9J0.gif", // Fenix
+    "https://i.imgur.com/gDQqkmt.gif", // Nesh
+    "https://i.imgur.com/z365Lui.gif", // Skeeo
+    "https://i.imgur.com/HCtY4Qf.gif", // Sny
+    "https://i.imgur.com/ABDdoWz.gif"  // Snywy
+]
+
 const desc = [
     "Dog smiling to the camera.",
     "Darkon smiling to the camera.",
@@ -148,7 +162,6 @@ const texts = [
     "'What if... no, that will not work.'",
     "'I heard someone here.. who's there!?'",
     "'So the triangle shape goes to.. the square hole!'",
-    "''",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
@@ -162,6 +175,37 @@ const randomIndTxt = Math.floor(Math.random() * texts.length);
 const elementTxt = document.getElementById("text-random");
 elementTxt.textContent = texts[randomIndTxt];
 
+const randomGal = Math.floor(Math.random() * gallery.length);
+
+const elementsGal = document.querySelectorAll(".galIMG");
+    
+let shuffledGallery = [...gallery];
+    
+for (let i = shuffledGallery.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledGallery[i], shuffledGallery[j]] = [shuffledGallery[j], shuffledGallery[i]];
+}
+
+elementsGal.forEach((imgElement, index) => {
+    imgElement.src = shuffledGallery[index % shuffledGallery.length];
+});
+
+function shuffleGallery() {
+    const elementsGal = document.querySelectorAll(".galIMG");
+    
+    let shuffledGallery = [...gallery];
+    
+    for (let i = shuffledGallery.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffledGallery[i], shuffledGallery[j]] = [shuffledGallery[j], shuffledGallery[i]];
+    }
+
+    elementsGal.forEach((imgElement, index) => {
+        imgElement.src = shuffledGallery[index % shuffledGallery.length];
+    });
+}
+document.getElementById('shuffleBtn').addEventListener('click', shuffleGallery);
+
 var weird = new Audio('./assets/sounds/weirdroutejingle.mp3');
 weird.preload = 'auto';
 weird.volume = 0.2;
@@ -173,15 +217,4 @@ yay.volume = 0.2;
 Mousetrap.bind('z o n i a', function() {
     weird.play();
     alert("She do the work here. You should know her someday.");
-});
-
-Mousetrap.bind('p r o t o', function () {
-    weird.play();
-    alert("He's a goofy guy. Veery dumb. It's fine.")
-});
-
-Mousetrap.bind('s n y w y', function () {
-    weird.play();
-    alert("He's very nerd at stuff. He loves Sonic, and me.")
-});
-
+})

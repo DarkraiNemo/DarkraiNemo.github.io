@@ -79,6 +79,11 @@ footer {
     background-color: var(--color-dark);
 }
 
+hr {
+    width: 75%;
+    border-color: var(--color-light);
+}
+
 /* Custom Tags */
 
 .container {
@@ -102,11 +107,11 @@ footer {
 }
 
 .hoverZoom {
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 
 .hoverZoom:hover {
-    transform: scale(1.5);
+    transform: scale(2) ;
     border-radius: 0px;
 }
 
@@ -130,6 +135,7 @@ footer {
     padding: 0.5rem 1rem;
     text-decoration: none;
 }
+
 .dropdown-content {
     position: absolute;
     right: 0;
@@ -222,6 +228,18 @@ footer {
 .btnLabel a:hover {
     background-color: var(--color-light);
     color: var(--color-black);
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 85%;
+    height: auto;
 }
 
 /* Mobile Settings */
