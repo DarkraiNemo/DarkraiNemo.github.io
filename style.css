@@ -86,6 +86,20 @@ hr {
 
 /* Custom Tags */
 
+.color {
+    /* Define a cor usando sua variável */
+    background-color: var(--color-white); 
+    
+    /* Cria uma máscara com a própria imagem */
+    -webkit-mask-image: url(''); /* O src será injetado pelo HTML */
+    mask-image: url('');
+    
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -285,5 +299,19 @@ hr {
         object-fit: cover;
         display: block;
         margin: 0 auto;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas iguais */
+        gap: 10px; /* Espaço entre as imagens */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .gallery img {
+        width: 100%; /* Faz a imagem preencher a coluna */
+        height: auto;
+        border-radius: 8px;
     }
 }

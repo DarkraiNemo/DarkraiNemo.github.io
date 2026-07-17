@@ -162,6 +162,9 @@ const texts = [
     "'What if... no, that will not work.'",
     "'I heard someone here.. who's there!?'",
     "'So the triangle shape goes to.. the square hole!'",
+    "'MORAGO AO LEIEEIEEIEIEEETEEEEEeeEEeeeeeeEEeEEEe...!'",
+    "'*angry bleat noises*'",
+    "''",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
