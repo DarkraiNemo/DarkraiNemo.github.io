@@ -121,11 +121,11 @@ hr {
 }
 
 .hoverZoom {
-    transition: transform 0.3s ease, border-radius 0.3s ease;
+    transition: transform 0.1s ease, border-radius 0.3s ease;
 }
 
 .hoverZoom:hover {
-    transform: scale(2) ;
+    transform: scale(1.5);
     border-radius: 0px;
 }
 
@@ -245,15 +245,19 @@ hr {
 }
 
 .gallery {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(140px, 1fr)); 
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .gallery img {
-    width: 85%;
+    width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 /* Mobile Settings */

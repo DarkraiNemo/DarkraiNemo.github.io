@@ -33,14 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         sfx.play();
         sfx.volume = 0.2;
     });
-    /*
-    const audio = document.getElementById('audio');
-    if (audio) {
-        audio.volume = 0.1;
-    } else {
-        console.log("There is no audio to be played, check your path file.")
-    }
-    */
 });
 
 const themes = {
