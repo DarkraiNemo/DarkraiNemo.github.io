@@ -213,3 +213,36 @@ Mousetrap.bind('z o n i a', function() {
     weird.play();
     alert("She do the work here. You should know her someday.");
 })
+
+function startCountdown(month, day) {
+    const element = document.getElementById('countdown');
+
+    const interval = setInterval(() => {
+        const now = new Date();
+        let currentYear = now.getFullYear();
+
+        let birthday = new Date(currentYear, month - 1, day);
+
+        if (now > birthday) {
+            birthday = new Date(currentYear + 1, month - 1, day);
+        }
+
+        const difference = birthday - now;
+
+        if (difference <= 0) {
+            clearInterval(interval);
+            element.innerHTML = "Today is the big day! It mah birthday!";
+            return;
+        }
+
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        element.innerHTML = `< ${days}d ${hours}h ${minutes}m ${seconds}s >`;
+
+    }, 1000);
+}
+
+startCountdown(9, 11);

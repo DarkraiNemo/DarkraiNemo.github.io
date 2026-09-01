@@ -87,11 +87,9 @@ hr {
 /* Custom Tags */
 
 .color {
-    /* Define a cor usando sua variável */
     background-color: var(--color-white); 
     
-    /* Cria uma máscara com a própria imagem */
-    -webkit-mask-image: url(''); /* O src será injetado pelo HTML */
+    -webkit-mask-image: url('');
     mask-image: url('');
     
     -webkit-mask-repeat: no-repeat;
@@ -258,6 +256,10 @@ hr {
     width: 100%;
     height: auto;
     border-radius: 8px;
+}
+
+#secretBtn {
+    display: none;
 }
 
 /* Mobile Settings */
