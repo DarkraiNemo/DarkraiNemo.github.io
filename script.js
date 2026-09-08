@@ -62,10 +62,19 @@ const themes = {
         '--color-accent': '#51210F',
         '--color-dark': '#241008',
         '--color-black': '#202020'
+    },
+    zombie: {
+        '--color-white': '#E9E9E9',
+        '--color-light': '#DBD3E5',
+        '--color-main': '#ADBD7D',
+        '--color-secondary': '#829350',
+        '--color-accent': '#797D64',
+        '--color-dark': '#312740',
+        '--color-black': '#202020'
     }
 };
 
-const themeOrder = ['dragon', 'dog', 'deer'];
+const themeOrder = ['dragon', 'dog', 'deer', 'zombie'];
 let currentTheme = 'dragon';
 
 function applyTheme(name) {
@@ -88,7 +97,8 @@ function updateThemeButton() {
     const labelMap = {
         dragon: 'Dragon Theme',
         dog: 'Dog Theme',
-        deer: 'Deer Theme'
+        deer: 'Deer Theme',
+        zombie: 'Zombie Theme'
     };
     button.textContent = labelMap[nextTheme] || 'Switch Theme';
 }
@@ -104,15 +114,6 @@ window.addEventListener('load', function() {
     updateThemeButton();
 });
 
-const images = [
-    "https://i.imgur.com/oJjxLAK.png",  // Dog
-    "https://i.imgur.com/mWzDajl.png",  // Darkon
-    "https://i.imgur.com/1fXFGYN.png",  // Nebulon
-    "https://i.imgur.com/MchxPVW.png",  // Rogy
-    "https://i.imgur.com/arJzBCL.png",  // Rygar
-    "https://i.imgur.com/0mRuaJu.png"   // Deer
-]
-
 const gallery = [
     "https://i.imgur.com/7g1H5IK.gif", // Cloud
     "https://i.imgur.com/DBBlXff.gif", // D4RK
@@ -127,13 +128,24 @@ const gallery = [
     "https://i.imgur.com/ABDdoWz.gif"  // Snywy
 ]
 
+const images = [
+    "https://i.imgur.com/oJjxLAK.png",   // Dog
+    "https://i.imgur.com/mWzDajl.png",   // Darkon
+    "https://i.imgur.com/1fXFGYN.png",   // Nebulon
+    "https://i.imgur.com/MchxPVW.png",   // Rogy
+    "https://i.imgur.com/arJzBCL.png",   // Rygar
+    "https://i.imgur.com/0mRuaJu.png",   // Deer
+    "https://i.imgur.com/L0fGFwe.png"
+]
+
 const desc = [
     "Dog smiling to the camera.",
     "Darkon smiling to the camera.",
     "Nebulong pondering on space.",
     "Rogy looking aside to a bird.",
     "Rygar rushing hour.",
-    "Deer with a nice grim."
+    "Deer with a nice grim.",
+    "Zombie dog bleping at you."
 ]
 
 const texts = [
