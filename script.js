@@ -127,7 +127,7 @@ const gallery = [
     "https://i.imgur.com/HCtY4Qf.gif", // Sny
     "https://i.imgur.com/ABDdoWz.gif"  // Snywy
 ]
-
+/*
 const images = [
     "https://i.imgur.com/oJjxLAK.png",   // Dog
     "https://i.imgur.com/mWzDajl.png",   // Darkon
@@ -135,7 +135,7 @@ const images = [
     "https://i.imgur.com/MchxPVW.png",   // Rogy
     "https://i.imgur.com/arJzBCL.png",   // Rygar
     "https://i.imgur.com/0mRuaJu.png",   // Deer
-    "https://i.imgur.com/L0fGFwe.png"
+    "https://i.imgur.com/L0fGFwe.png",   // Zombie Dog
 ]
 
 const desc = [
@@ -147,6 +147,28 @@ const desc = [
     "Deer with a nice grim.",
     "Zombie dog bleping at you."
 ]
+*/
+
+const images = [
+    "https://i.imgur.com/ztXYTuU.png",     // Darkon
+    "https://i.imgur.com/AYw6AOp.png",     // Deer
+    "https://i.imgur.com/kQMQeeu.png",     // Dog
+    "https://i.imgur.com/PPHGk2k.png",     // Nebulon
+    "https://i.imgur.com/EDMVBcA.png",     // Rogy
+    "https://i.imgur.com/sQGoQha.png",     // Rygar
+    "https://i.imgur.com/wDGXV5u.png",     // Zombie Dog
+]
+
+const desc = [
+    "Darkon with a grim.",
+    "Deer sleeping on the bed.",
+    "Dog being very happy.",
+    "Nebulon bleping at you.",
+    "Rogy smiling at you.",
+    "Rygar balacing on one leg.",
+    "Zombie dog with a machete on his mouth.",
+]
+
 /*
 const texts = [
     "'We gotta pull this through!'",
