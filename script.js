@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const titulo = document.getElementById('silly');
     titulo.addEventListener('click', () => {
-        const sfx = new Audio('./assets/sounds/roblox-birthday-cake-2010-sound.mp3');
+        const sfx = new Audio('./assets/sounds/splat.mp3');
         sfx.play();
         sfx.volume = 0.2;
     });
@@ -127,6 +127,7 @@ const gallery = [
     "https://i.imgur.com/HCtY4Qf.gif", // Sny
     "https://i.imgur.com/ABDdoWz.gif"  // Snywy
 ]
+
 /*
 const images = [
     "https://i.imgur.com/oJjxLAK.png",   // Dog
@@ -195,11 +196,16 @@ const texts = [
 */
 
 const texts = [
-    "'Happy birthday to me!'",
-    "'Man I'm old...'",
-    "'Where's my cake!?'",
-    "'roblox_gear_birthday_cake_2010'",
-    "'Can I have lots of chicken nuggets from mcdonalds? Please..?'"
+    "'Atually... that's not bad.. You got guts kid.'",
+    "'I can rip you off. But I'm not allowed to do that.'",
+    "'Where did I leave- There you are.'",
+    "'Something is bothering me.. and I don't like it!'",
+    "'Come on, let's go to the fields! It will be fun!'",
+    "'Zonia, put a timer for about 30 minutes.. I need to do something important..'",
+    "'*barking sounds*'",
+    "'Look, I know it seems hard but- H-HEY, DARKON, STOP THAT!'",
+    "'Gee, it sure is booring around here...'",
+    "'Schnell auftauchen! Schnell auftauchen! Vorbereitung auf Luftangriff!Gee I've been playing a lot of that game...'",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
@@ -256,7 +262,7 @@ Mousetrap.bind('z o n i a', function() {
     weird.play();
     alert("She do the work here. You should know her someday.");
 })
-
+/*
 function startCountdown(month, day) {
     const element = document.getElementById('countdown');
 
@@ -289,3 +295,4 @@ function startCountdown(month, day) {
 }
 
 startCountdown(9, 11);
+*/
