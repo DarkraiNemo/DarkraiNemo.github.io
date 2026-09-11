@@ -106,7 +106,7 @@ hr {
     gap: 20px;
     padding: 25px;
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
     background: linear-gradient(180deg, var(--color-secondary), var(--color-accent));
     border-radius: 15px;
 }
@@ -306,7 +306,7 @@ hr {
     }
 
     .container {
-        max-width: 280px;
+        max-width: 360px;
         margin: 0 auto;
     }
 

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const titulo = document.getElementById('silly');
     titulo.addEventListener('click', () => {
-        const sfx = new Audio('./assets/sounds/splat.mp3');
+        const sfx = new Audio('./assets/sounds/roblox-birthday-cake-2010-sound.mp3');
         sfx.play();
         sfx.volume = 0.2;
     });
@@ -147,7 +147,7 @@ const desc = [
     "Deer with a nice grim.",
     "Zombie dog bleping at you."
 ]
-
+/*
 const texts = [
     "'We gotta pull this through!'",
     "'AwruuUuUuuuu..! Wait, sorry..'",
@@ -169,6 +169,15 @@ const texts = [
     "'MORANGO AO LEIEEIEEIEIEEETEEEEEeeEEeeeeeeEEeEEEe...!'",
     "'*angry bleat noises*'",
     "'If life give you lemons.... do whatever you want, I don't care.'",
+]
+*/
+
+const texts = [
+    "'Happy birthday to me!'",
+    "'Man I'm old...'",
+    "'Where's my cake!?'",
+    "'roblox_gear_birthday_cake_2010'",
+    "'Can I have lots of chicken nuggets from mcdonalds? Please..?'"
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
