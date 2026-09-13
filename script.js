@@ -205,7 +205,7 @@ const texts = [
     "'*barking sounds*'",
     "'Look, I know it seems hard but- H-HEY, DARKON, STOP THAT!'",
     "'Gee, it sure is booring around here...'",
-    "'Schnell auftauchen! Schnell auftauchen! Vorbereitung auf Luftangriff!Gee I've been playing a lot of that game...'",
+    "'Schnell auftauchen! Schnell auftauchen! Vorbereitung auf Luftangriff! Gee I've been playing a lot of that game...'",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
