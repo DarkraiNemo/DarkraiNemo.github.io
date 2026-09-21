@@ -170,31 +170,6 @@ const desc = [
     "Zombie dog with a machete on his mouth.",
 ]
 
-/*
-const texts = [
-    "'We gotta pull this through!'",
-    "'AwruuUuUuuuu..! Wait, sorry..'",
-    "'So.. if I add 2 + 2 on here... it should be 5, right?'",
-    "'Thats.. not a good idea, honestly.'",
-    "'01010100 01101111 01101111 01101011 00100000 01111001 01101111 01110101 00100000 01101100 01101111 01101110 01100111 00100000 01100101 01101110 01101111 01110101 01100111 01101000 00101110'",
-    "'I think that spaces should be home for everyone!'",
-    "'Oh dear! ...ok sorry for that.'",
-    "'Ok so, basically, I have a plan.. w-which I may forgot what the plan was.'",
-    "'I am smart! Not really.. sorry..'",
-    "'Rygar, get back here!'",
-    "'Rogy, go the blueprint.. I need to do something about it..'",
-    "'Nebulon, fetch me a random piece from space.. I will use that for... something...'",
-    "'Darkon, stop thinking you are the main character throwing punchies!'",
-    "'* Proceed. '",
-    "'What if... no, that will not work.'",
-    "'I heard someone here.. who's there!?'",
-    "'So the triangle shape goes to.. the square hole!'",
-    "'MORANGO AO LEIEEIEEIEIEEETEEEEEeeEEeeeeeeEEeEEEe...!'",
-    "'*angry bleat noises*'",
-    "'If life give you lemons.... do whatever you want, I don't care.'",
-]
-*/
-
 const texts = [
     "'Atually... that's not bad.. You got guts kid.'",
     "'I can rip you off. But I'm not allowed to do that.'",
@@ -206,6 +181,8 @@ const texts = [
     "'Look, I know it seems hard but- H-HEY, DARKON, STOP THAT!'",
     "'Gee, it sure is booring around here...'",
     "'Schnell auftauchen! Schnell auftauchen! Vorbereitung auf Luftangriff! Gee I've been playing a lot of that game...'",
+    "'If life give you lemons.... do whatever you want, I don't care.'",
+    "'I am smart! Not really.. sorry..'",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
