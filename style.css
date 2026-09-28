@@ -35,6 +35,7 @@ header {
     gap: 15%;
     margin: 0px 15px 15px 0px;
     background-color: var(--color-dark);
+    z-index: 1000;
 }
 
 h1 {
@@ -77,6 +78,7 @@ footer {
     text-align: center;
     bottom: 0;
     background-color: var(--color-dark);
+    z-index: 1000;
 }
 
 hr {
@@ -85,6 +87,14 @@ hr {
 }
 
 /* Custom Tags */
+
+.modelView {
+    width: 100%;
+    height: 500px;
+    border-radius: 15px;
+    border: 4px solid transparent;
+    border-image: linear-gradient(180deg, var(--color-white), var(--color-dark));
+}
 
 .color {
     background-color: var(--color-white); 
@@ -107,8 +117,8 @@ hr {
     padding: 25px;
     width: 100%;
     max-width: 650px;
-    background: linear-gradient(180deg, var(--color-secondary), var(--color-accent));
     border-radius: 15px;
+    background-color: var(--color-secondary);
 }
 
 .container img {
@@ -269,6 +279,21 @@ hr {
     border-radius: 8px;
 }
 
+.skillsTab {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(75px, 1fr)); 
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.skillsTab img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 #secretBtn {
     display: none;
 }
@@ -320,14 +345,28 @@ hr {
 
     .gallery {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Cria 4 colunas iguais */
-        gap: 10px; /* Espaço entre as imagens */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
         width: 100%;
         margin-bottom: 10px;
     }
 
     .gallery img {
-        width: 100%; /* Faz a imagem preencher a coluna */
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .skillsTab {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .skillsTab img {
+        width: 100%;
         height: auto;
         border-radius: 8px;
     }
