@@ -25,6 +25,7 @@ html, body {
 }
 
 header {
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +36,6 @@ header {
     gap: 15%;
     margin: 0px 15px 15px 0px;
     background-color: var(--color-dark);
-    z-index: 1000;
 }
 
 h1 {
@@ -73,12 +73,12 @@ main section.active {
 }
 
 footer {
+    z-index: 1000;
     position: fixed;
     width: 100%;
     text-align: center;
     bottom: 0;
     background-color: var(--color-dark);
-    z-index: 1000;
 }
 
 hr {
