@@ -172,7 +172,7 @@ const desc = [
 
 const texts = [
     "'IT'S DAH SPOOKY MONTH!1!!!1!!!'",
-    "'Cannnn I have candies? (stoles) OOPSS!'",
+    "'Cannnn I have candies? (steals) OOPSS!'",
     "'Check this out- OH GOD *falls*'",
     "'Hah, prank him John. WHAT THE---'",
     "'*dances* Wait there is nothing playing.. man...'",
