@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const titulo = document.getElementById('silly');
     titulo.addEventListener('click', () => {
-        const sfx = new Audio('./assets/sounds/splat.mp3');
+        const sfx = new Audio('./assets/sounds/spookyyy.mp3');
         sfx.play();
         sfx.volume = 0.2;
     });
 });
-
+/*
 const themes = {
     dragon: {
         '--color-white': '#F5F5F5',
@@ -113,7 +113,7 @@ window.addEventListener('load', function() {
     applyTheme(currentTheme);
     updateThemeButton();
 });
-
+*/
 const gallery = [
     "https://i.imgur.com/7g1H5IK.gif", // Cloud
     "https://i.imgur.com/DBBlXff.gif", // D4RK
@@ -171,18 +171,12 @@ const desc = [
 ]
 
 const texts = [
-    "'Atually... that's not bad.. You got guts kid.'",
-    "'I can rip you off. But I'm not allowed to do that.'",
-    "'Where did I leave- There you are.'",
-    "'Something is bothering me.. and I don't like it!'",
-    "'Come on, let's go to the fields! It will be fun!'",
-    "'Zonia, put a timer for about 30 minutes.. I need to do something important..'",
-    "'*barking sounds*'",
-    "'Look, I know it seems hard but- H-HEY, DARKON, STOP THAT!'",
-    "'Gee, it sure is booring around here...'",
-    "'Schnell auftauchen! Schnell auftauchen! Vorbereitung auf Luftangriff! Gee I've been playing a lot of that game...'",
-    "'If life give you lemons.... do whatever you want, I don't care.'",
-    "'I am smart! Not really.. sorry..'",
+    "'IT'S DAH SPOOKY MONTH!1!!!1!!!'",
+    "'Cannnn I have candies? (stoles) OOPSS!'",
+    "'Check this out- OH GOD *falls*'",
+    "'Hah, prank him John. WHAT THE---'",
+    "'*dances* Wait there is nothing playing.. man...'",
+    "'Ooh piece of candy! Ooh piece of candy! Ooh piece of candy! Ooh piece of candy! OH GOD THERE'S A LOT OF PIECES OF CANDY!!'",
 ]
 
 const randomInd = Math.floor(Math.random() * images.length);
@@ -239,6 +233,23 @@ Mousetrap.bind('z o n i a', function() {
     weird.play();
     alert("She do the work here. You should know her someday.");
 })
+
+const button = document.getElementById("randomNum");
+const spookySound = new Audio('./assets/sounds/witchesOOOO.mp3');
+const numTarget = 87;
+
+button.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const number = Math.floor(Math.random() * 100) + 1;
+    button.textContent = number;
+
+    if (number === numTarget) {
+        spookySound.currentTime = 0;
+        spookySound.play();
+    }
+});
+
 /*
 function startCountdown(month, day) {
     const element = document.getElementById('countdown');
