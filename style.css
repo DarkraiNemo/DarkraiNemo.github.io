@@ -289,6 +289,22 @@ hr {
     border-radius: 8px;
 }
 
+.galleryRef {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr)); 
+    justify-content: center;
+    justify-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.galleryRef img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .skillsTab {
     display: grid;
     grid-template-columns: repeat(5, minmax(75px, 1fr)); 
@@ -362,6 +378,22 @@ hr {
     }
 
     .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .galleryRef {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(320px, 1fr)); 
+        justify-content: center;
+        justify-items: center;
+        gap: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .galleryRef img {
         width: 100%;
         height: auto;
         border-radius: 8px;
