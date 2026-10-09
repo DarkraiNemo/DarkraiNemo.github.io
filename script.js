@@ -267,6 +267,17 @@ Mousetrap.bind('r o g y', function() {
     alert("Buddy hey.. my belly is not a balloon...");
 });
 
+Mousetrap.bind('n e s h', function() {
+    yay.play();
+    alert("He has autism.. I like him. Hi Nesh!");
+});
+
+Mousetrap.bind('s n y w y', function() {
+    yay.play();
+    alert("Hi Snywy! Oh wait, let me do one thing..");
+    window.location.href = 'https://realsnywy.github.io';
+});
+
 /* Mousetrap easter egg: p a w */
 
 const eggImg = document.createElement('img');
@@ -275,14 +286,18 @@ eggImg.src = 'https://i.imgur.com/L8tv2vf.png';
 eggImg.alt = '';
 document.body.appendChild(eggImg);
 
-var vineBoom = new Audio('./assets/sounds/vine-boom-low-quality.mp3');
-vineBoom.preload = 'auto';
-vineBoom.volume = 0.6;
+const vineBoomSrc = './assets/sounds/vine-boom-low-quality.mp3';
+
+const vineBoomPreload = new Audio(vineBoomSrc);
+vineBoomPreload.preload = 'auto';
 
 let eggAnim = null;
 
 Mousetrap.bind('p a w', () => {
-    vineBoom.play();
+    const sfx = new Audio(vineBoomSrc);
+    sfx.volume = 0.6;
+    sfx.play();
+
     if (eggAnim) eggAnim.cancel();
 
     eggAnim = eggImg.animate(
