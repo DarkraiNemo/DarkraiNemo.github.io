@@ -2,230 +2,280 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/x-icon" href="./zonialogo.svg">
     <title>zoniasite_</title>
 </head>
 <body>
-    <header>
-        <h1 class="animated-gradient" id="silly">ZoniaSite_</h1>
-        <div class="containerBtn">
-            <button onclick="dropFunc()" class="dropbtn">LabMenu_</button>
-			<div id="dropMenu" class="dropdown-content">
-				<a onclick="showTab('home')">home</a>
-				<a onclick="showTab('comission')">comission</a>
-                <a onclick="showTab('refSheet')">refSheet</a>
-				<a onclick="showTab('links')">links</a>
-				<a href="#" id="randomNum">...</a>
-                <!--<a id="themeToggleBtn" onclick="swColor()">switch colors</a>-->
-			</div>
-        </div>
-    </header>
     <main>
-        <section id="tab-home" class="content-row">
-            <div class="container">
-                <h2>Elloo pup! Welcome to me labs <i>(wags)</i></h2>
-                <img id="avatar-random" src="./assets/imgs/darkonSmiling.gif" alt="Darkon Smiling" class="hoverZoom">
-                <p id="text-random" style="background: var(--color-dark); padding: 5px; border-radius: 5px;">'There should be something here..'</p>
-                <p><br>My name is Darkgreyrai_, male, I am 23 years old, fat, dumb as fuck. Pronouns go by He/Him.<br>I am a artist on BluekSky, making content about furries, being my main sonas and sillies, gifts and so on. I also am making render and models on Blender! This is a big step for me hehe.</p>
-				<p>For myself, my real <a href="assets/vids/vverycoolvid.mp4" class="hide">name</a> is <span class="censored">stillNotTelling</span>, currently studying at IESB college, about Systems Analysis and Development. I am tall with 1,86cm <i>(6' 1.2'')</i>, fat (as usual..), "almost" turning bald.</p>
-                <hr>
-                <model-viewer
-                    src="./assets/models/dogViewPlate.glb"
-                    alt="3D Model of Zombie Dog with a Zonia logo."
-                    camera-controls
-                    auto-rotate
-                    shadow-intensity="0.5"
-                    style="width: 100%; height: 500px;">
-                </model-viewer>
-                <small style="color: rgb(213, 212, 212); padding: 25px;">interactable 3DModel of a Zombie dog with a Zonia logo next to it.</small>
-                <hr>
-                <h2>On Loop</h2>
-                <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2385150078&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rioriorio0606" title="ryo" target="_blank" style="color: #cccccc; text-decoration: none;">ryo</a> · <a href="https://soundcloud.com/rioriorio0606/still-love-you-slowed-glm-rst" title="still love you (Slowed) - GLM-RST" target="_blank" style="color: #cccccc; text-decoration: none;">still love you (Slowed) - GLM-RST</a></div>
-                <hr>
-                <h2>Dev Skills_</h2>
-                <p>This is all my currently skills I can work on! There is still room for improvement but uh you know, it's something!</p>
-                <div class="skillsTab">
-                    <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/html5/F5F5F5" alt="html5">
-                    <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/javascript/F5F5F5" alt="javascript">
-                    <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/python/F5F5F5" alt="python">
-                    <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/ruby/F5F5F5" alt="ruby">
-                    <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/cplusplus/F5F5F5" alt="c++">
-                </div>                
-        </section>
-        <section id="tab-comission" class="content-row">
-            <div class="container">
-                <h1>Zonia Comms Available<br>- 24/7 -</h1>
-                <h2>Minecraft Player Models</h2>
-                <small>* Tip: Hover the image to zoom in.</small>
-                <img src="./assets/imgs/panel1.png" alt="Minecraft comms panel" class="hoverZoom">
-                <p>How does it work?</p>
-                <p>There are two available options to choose:<br>1. You can order a simple Minecraft Skin that works everywhere, Java or Bedrock.<br>1.1. This does <i>not</i> include animations, toggles nor anything, but I can provide you some files for change clothes, like 3 or 4.</p>
-                <p>2. You can order a Customizable Player Model that only works on Modded Java.<br>2.1. This <i>does</i> include some toggles, animations and so on.<br><br><strong>Q: "But what things am I going to get?"<br>A: "Simple!:"</strong><br><br>2.2. AFK emote, Raised Eyebrows, Clothes Toggles, Sitting Emote, Thinking, and Sleeping Animation.<br>2.3. Oh, and if the model is bigger than the regular Minecraft proportions, I can also ajust the Armor Offset no problem!</p>
-                <button onclick="showTab('terms')" class="btnSection">Read the T.O.S. and Rules</button>
-                <hr>
-                <h2>Here is some of my recent work!</h2>
-                <div class="gallery">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
+        <section class="content-grid">
+            <aside>
+                <div class="container">
+                    <header>
+                        <h1 class="animated-gradient" id="silly">ZoniaSite</h1>
+                        <div class="containerBtn">
+                            <button onclick="dropFunc()" class="dropbtn" style="font-size: 18px">LabMenu_</button>
+                            <div id="dropMenu" class="dropdown-content">
+                                <a onclick="showTab('home')">home</a>
+                                <a onclick="showTab('comission')">comission</a>
+                                <a onclick="showTab('refSheet')">refSheet</a>
+                                <a onclick="showTab('links')">links</a>
+                                <a id="themeToggleBtn" onclick="swColor()">switch colors</a>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="content">
+                        <img id="avatar-random" src="./assets/imgs/darkonSmiling.gif" alt="Darkon Smiling" class="lookAtMouse">
+                        <p id="text-random" class="codeblock">"Weird.. something should be on here.. Let me reboot my systems.."</p>
+                        <footer>
+                            <small>- <span id="year"></span> &copy; ZoniaLabs -</small>
+                        </footer>
+                    </div>
                 </div>
-                <div class="gallery">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
-                    <img class="galIMG hoverZoom" src="">
-                </div>
-                <button id="shuffleBtn" class="btnSection">Shuffle them</button>
-                <hr>
-                <h2>Rendered Icons</h2>
-                <p>How does it work?</p>
-                <p>For just R$ 25 / $ 25, you can get this lineness art! Change any expression and thing you want.</p>
-                <div class="gallery">
-                    <img class="hoverZoom" src="https://i.imgur.com/6WVwLFe.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/PHVuyUH.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/6Re44hr.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/fKBKHyT.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/2hO33QS.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/Z0EVUvN.png">
-                </div>
-                <hr>
-                <h2>Front-Face Icons</h2>
-                <p>How does it work?</p>
-                <p>For just R$ 15 / $ 15, you can get this silly stupid guys! As usual, change for any expression you want.</p>
-                <div class="gallery">
-                    <img class="hoverZoom" src="https://i.imgur.com/fSrerz6.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/Yk8Oc4d.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/pR3TRgA.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/kWzFRib.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/iBmtSO9.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/EddhAtI.png">
-                </div>
-                <hr>
-                <h2>Reference Sheets</h2>
-                <div class="galleryRef">
-                    <img class="hoverZoom" src="https://i.imgur.com/LWCzeEJ.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/GW3JlTU.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/dTbK1Wx.png">
-                    <img class="hoverZoom" src="https://i.imgur.com/csJWlbE.png">
-                </div>
-                <p>How does it work?</p>
-                <p>For just R$ 70 / $ 70, you can get yourself a clean and good looking ref! Depending on your character, the price will pump up a little bit.</p>
-                <h2>More to come, stay tuned!</h2>
-            </div>
-        </section>
-        <section id="tab-terms" class="content-row">
-            <div class="container" style="width: 800px; text-align: justify;">
-                <h2>- About Paymets -</h2>
-                <p>
-                    I. I <strong>only</strong> accept currencies: <strong>BRL [ R$ ] & USD [ $ ]</strong>, nothing else. The conversion <i>should</i> be automatically, since I live in Brazil;<br>
-                    II. Banks that I accept:<br>II.i. For USD: I can use <strong>Wise</strong>, they do all the work and stuff;<br>II.ii. For BRL: Any bank that can accept <strong>PIX</strong>, Wise works as well;<br>
-                    II. You can pay how you want: If you choose to pay 50/50 or full price <i>(at the start or the end of the comm.)</i>;<br>
-                    III. If you want another CPM model, for like a friend or something, that would be another 40 bucks added to the order;<br>
-                    IV. Or, if you may wish to change your currently color of your sona or human, that will be 15 bucks added to the order;
-                </p>
-                <h2>- About Comission -</h2>
-                <p>
-                    I. First of all, if I DO fell <i>very</i> uncomfortable about the comission, I will cancel the order as well refunding the money. 100% guarantee.<br>
-                    II. I do share all the files that I did use, being:<strong> .png, .bbmodel, .cpmmodel</strong> and so on.
-                </p>
-                <p><strong>Q:</strong> <i>"But wait, what do you do and don't do?"</i></p>
-                <h3>- What I can do -</h3>
-                <p>
-                    I. Easy enough, furries <strong>AND</strong> humans;<br>
-                    I.i. For furries:<br>
-                    I.ii. Any species that will do, protogens, dragons, cat, dogs, you name it.<br><br>
-                    I.i. For Humans:<br>
-                    I.ii. Any kind of human type.<br><br>
-                    II. And, chubbies, of course.
-                </p>
-                <h3>- What I can't do -</h3>
-                <p>
-                    I. Gore;<br>
-                    II. Racism;<br>
-                    III. Fetish <i>(please ask me)</i>;<br>
-                    IV. Hate things related;<br>
-                    V. NSFW;<br>
-                </p>
-                <p>If you do have any questions, feel free to ask me on DM's! I will try to be clear as possible.</p>
-                <button onclick="showTab('comission')" class="btnSection">Go back</button>
-            </div>
-        </section>
-        <section id="tab-refSheet" class="content-row">
-            <div class="container">
-                <h2>Dork the Zombie DogDog</h2>
-                <img src="https://i.imgur.com/LWCzeEJ.png" class="hoverZoom">
-                <p>My Zombie dog! <i>Brainnzzz~</i>, I mean.. he won't bite! <i>(pinky promise.)</i> Anyway this is him, very gentle and cuddly doggie hehe.</p>
-                <a href="https://i.imgur.com/LWCzeEJ.png" target="_blank" class="btnSection">Link refSheet</a>
-                <hr>
-                <h2>Darkgrey the Dog</h2>
-                <img src="https://i.imgur.com/GW3JlTU.png" class="hoverZoom">
-                <p>This is me, my truesona! He's a dog, very fat and large, only wears cargo shorts <i>(like me)</i>. He's basically me in form of a dog.</p>
-                <a href="https://i.imgur.com/GW3JlTU.png" target="_blank" class="btnSection">Link refSheet</a>
-                <hr>
-                <h2>Darkon the Dragon</h2>
-                <img src="https://i.imgur.com/dTbK1Wx.png" class="hoverZoom">
-                <p>Darkon is a boxer around town in ZoniaLabs. He wears his straps for safety, <i>something could go very wrong if that were teared apart.</i></p>
-                <a href="https://i.imgur.com/dTbK1Wx.png" target="_blank" class="btnSection">Link refSheet</a>
-                <hr>
-                <h2>Can I make art of them?</h2>
-                <p>Why not, go ahead! Make any kind of art for my boios and tag me, or send it over! <i>(for the love of god, sfw.)</i></p>
-                <h2>More to be added.</h2>
-            </div>
-        </section>
-        <section id="tab-links" class="content-row">
-            <div class="container">
-                <h2>- Where you can find me! -</h2>
-                <div class="btnLabel">
-                    <a href="https://darkgreyrai.bsky.social" target="_blank" class="btnSection">
-                        <img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/bluesky/F5F5F5" alt="Bluesky">
-						<p>Bluesky</p>
-                    </a>
-                    <a href="https://trello.com/b/5Y8zofkp/zoniacomms" target="_blank" class="btnSection">
-						<img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/trello/F5F5F5" alt="Trello">
-						<p>Trello</p>
-					</a>
-                    <a href="https://www.roblox.com/users/2541819975/profile" target="_blank" class="btnSection">
-						<img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/roblox/F5F5F5" alt="Roblox">
-						<p>ROBLOX</p>
-					</a>
-                    <a href="https://www.tiktok.com/@darkgreyrai" target="_blank" class="btnSection">
-						<img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/tiktok/F5F5F5" alt="TikTok">
-						<p>TikTok</p>
-					</a>
-                </div>
-                <hr>
-                <div class="btnLabel">
-                    <a href="https://open.spotify.com/user/ovp1b34zip9t2kllhsdt6c5v0" target="_blank" class="btnSection">
-                        <img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/spotify/F5F5F5" alt="Spotify">
-						<p>Spotify</p>
-                    </a>
-                    <a href="https://steamcommunity.com/id/darkgreyrai/" target="_blank" class="btnSection">
-                        <img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/steam/F5F5F5" alt="Steam">
-						<p>Steam</p>
-                    </a>
-                    <a href="https://t.me/+kYZV9k9Cx6g4ODE5" target="_blank" class="btnSection">
-                        <img style="border-radius: none; padding: 10px" src="https://cdn.simpleicons.org/telegram/F5F5F5" alt="Telegram">
-						<p>Telegram</p>
-                    </a>
-                </div>
-            </div>
+            </aside>
+            <article>
+                <section id="tab-home" class="content-row">
+                    <section class="containerBox">
+                        <h1 style="text-align: center;">Elloo pup! Welcome to me labs <i>(wags)</i></h1>
+                        <div class="banner">
+                            <img src="https://i.imgur.com/50OhsZk.png" class="lookAtMouse">
+                        </div>
+                        <p><br>My name is Darkgreyrai_, male, I am 23 years old, fat, dumb as fuck. Pronouns go by He/Him.<br>I am a artist on BluekSky, making content about furries, being my main sonas and sillies, gifts and so on. I also am making render and models on Blender! This is a big step for me hehe.</p>
+                        <p>For myself, my real <a href="assets/vids/vverycoolvid.mp4" class="hide">name</a> is <span class="censored">stillNotTelling</span>, currently studying at IESB college, about Systems Analysis and Development. I am tall with 1,86cm <i>(6' 1.2'')</i>, fat (as usual..), "almost" turning bald.</p>
+                    </section>
+                    <hr>
+                    <model-viewer
+                        src="./assets/models/dogViewPlate.glb"
+                        alt="3D Model of Zombie Dog with a Zonia logo."
+                        camera-controls
+                        auto-rotate
+                        shadow-intensity="0.5"
+                    >
+                    </model-viewer>
+                    <small style="color: rgb(213, 212, 212); padding: 25px; text-align: center">interactable 3DModel of a Zombie dog with a Zonia logo next to it.</small>
+                    <hr>
+                    <section class="containerBox">
+                        <h2>On Loop</h2>
+                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2385150078&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/rioriorio0606" title="ryo" target="_blank" style="color: #cccccc; text-decoration: none;">ryo</a> · <a href="https://soundcloud.com/rioriorio0606/still-love-you-slowed-glm-rst" title="still love you (Slowed) - GLM-RST" target="_blank" style="color: #cccccc; text-decoration: none;">still love you (Slowed) - GLM-RST</a></div>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h2>Dev Skills_</h2>
+                        <p>This is all my currently skills I can work on! There is still room for improvement but uh you know, it's something!</p>
+                        <div class="skillsTab">
+                            <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/html5/F5F5F5" alt="html5">
+                            <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/javascript/F5F5F5" alt="javascript">
+                            <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/python/F5F5F5" alt="python">
+                            <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/ruby/F5F5F5" alt="ruby">
+                            <img style="border-radius: none; padding: 10px; width: 75px; height: 75px;" src="https://cdn.simpleicons.org/cplusplus/F5F5F5" alt="c++">
+                        </div>
+                    </section>
+                </section>
+                <section id="tab-comission" class="content-row">
+                    <h1 style="text-align: center;" class="animated-gradient">Zonia Comms Available</h1>
+                    <h2 style="text-align: center;">Minecraft Player Models</h2>
+                    <div class="banner">
+                        <img src="./assets/imgs/panel1.png" alt="Minecraft comms panel" class="lookAtMouse">
+                    </div>
+                    <small>* Tip: Hover the image to zoom in.</small>
+                    <p>There are two available options to choose:<br>1. You can order a simple Minecraft Skin that works everywhere, Java or Bedrock.<br>1.1. This does <i>not</i> include animations, toggles nor anything, but I can provide you some files for change clothes, like 3 or 4.</p>
+                    <p>2. You can order a Customizable Player Model that only works on Modded Java.<br>2.1. This <i>does</i> include some toggles, animations and so on.<br><br><strong>Q: "But what things am I going to get?"<br>A: "Simple!:"</strong><br><br>2.2. AFK emote, Raised Eyebrows, Clothes Toggles, Sitting Emote, Thinking, and Sleeping Animation.<br>2.3. Oh, and if the model is bigger than the regular Minecraft proportions, I can also ajust the Armor Offset no problem!</p>
+                    <section class="containerBox">
+                        <button onclick="showTab('terms')" class="btnSection">Read the T.O.S. and Rules</button>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                    <h2>Here is some of my recent work!</h2>
+                        <div class="gallery">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                            <img class="galIMG lookAtMouse" src="">
+                        </div>
+                        <button id="shuffleBtn" class="btnSection">Shuffle them</button>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h2>Rendered Icons</h2>
+                        <p>How does it work?</p>
+                        <p>For just R$ 25 / $ 25, you can get this lineness art! Change any expression and thing you want.</p>
+                        <div class="gallery">
+                            <img class="lookAtMouse" src="https://i.imgur.com/6WVwLFe.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/PHVuyUH.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/6Re44hr.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/fKBKHyT.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/2hO33QS.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/Z0EVUvN.png">
+                        </div>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h2>Front-Face Icons</h2>
+                        <p>How does it work?</p>
+                        <p>For just R$ 15 / $ 15, you can get this silly stupid guys! As usual, change for any expression you want.</p>
+                        <div class="gallery">
+                            <img class="lookAtMouse" src="https://i.imgur.com/fSrerz6.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/Yk8Oc4d.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/pR3TRgA.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/kWzFRib.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/iBmtSO9.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/EddhAtI.png">
+                        </div>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h2>Reference Sheets</h2>
+                        <div class="galleryRef">
+                            <img class="lookAtMouse" src="https://i.imgur.com/LWCzeEJ.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/GW3JlTU.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/dTbK1Wx.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/csJWlbE.png">
+                        </div>
+                        <p>How does it work?</p>
+                        <p>For just R$ 70 / $ 70, you can get yourself a clean and good looking ref! Depending on your character, the price will pump up a little bit.</p>
+                        <h2>More to come, stay tuned!</h2>
+                    </section>
+                </section>
+                <section id="tab-terms" class="content-row">
+                    <section class="containerBox">
+                        <h2>- About Paymets -</h2>
+                        <p>
+                            I. I <strong>only</strong> accept currencies: <strong>BRL [ R$ ] & USD [ $ ]</strong>, nothing else. The conversion <i>should</i> be automatically, since I live in Brazil;<br>
+                            II. Banks that I accept:<br>II.i. For USD: I can use <strong>Wise</strong>, they do all the work and stuff;<br>II.ii. For BRL: Any bank that can accept <strong>PIX</strong>, Wise works as well;<br>
+                            II. You can pay how you want: If you choose to pay 50/50 or full price <i>(at the start or the end of the comm.)</i>;<br>
+                            III. If you want another CPM model, for like a friend or something, that would be another 40 bucks added to the order;<br>
+                            IV. Or, if you may wish to change your currently color of your sona or human, that will be 15 bucks added to the order;
+                        </p>
+                        <h2>- About Comission -</h2>
+                        <p>
+                            I. First of all, if I DO fell <i>very</i> uncomfortable about the comission, I will cancel the order as well refunding the money. 100% guarantee.<br>
+                            II. I do share all the files that I did use, being:<strong> .png, .bbmodel, .cpmmodel</strong> and so on.
+                        </p>
+                        <p><strong>Q:</strong> <i>"But wait, what do you do and don't do?"</i></p>
+                        <h3>- What I can do -</h3>
+                        <p>
+                            I. Easy enough, furries <strong>AND</strong> humans;<br>
+                            I.i. For furries:<br>
+                            I.ii. Any species that will do, protogens, dragons, cat, dogs, you name it.<br><br>
+                            I.i. For Humans:<br>
+                            I.ii. Any kind of human type.<br><br>
+                            II. And, chubbies, of course.
+                            </p>
+                        <h3>- What I can't do -</h3>
+                        <p>
+                            I. Gore;<br>
+                            II. Racism;<br>
+                            III. Fetish <i>(please ask me)</i>;<br>
+                            IV. Hate things related;<br>
+                            V. NSFW;<br>
+                        </p>
+                        <p>If you do have any questions, feel free to ask me on DM's! I will try to be clear as possible.</p>
+                        <button onclick="showTab('comission')" class="btnSection">Go back</button>
+                    </section>
+                    </section>
+                <section id="tab-refSheet" class="content-row">
+                    <section class="containerBox">
+                        <h1>Dork the Zombie Dog</h1>
+                        <div class="banner">
+                            <img src="https://i.imgur.com/LWCzeEJ.png" class="lookAtMouse">
+                        </div>
+                        <div class="tags">
+                            <a>zombie</a>
+                            <a>dog</a>
+                            <a>bloody</a>
+                            <a>fat</a>
+                        </div>
+                        <p>My Zombie dog! <i>Brainnzzz~</i>, I mean.. he won't bite! <i>(pinky promise.)</i> Anyway this is him, very gentle and cuddly doggie hehe.</p>
+                        <a href="https://i.imgur.com/LWCzeEJ.png" target="_blank" class="btnSection">Link refSheet</a>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h1>Darkgrey the Dog</h1>
+                        <div class="banner">
+                            <img src="https://i.imgur.com/GW3JlTU.png" class="lookAtMouse">
+                        </div>
+                        <div class="tags">
+                            <a>good boy</a>
+                            <a>dog</a>
+                            <a>fat</a>
+                            <a>stupid</a>
+                        </div>
+                        <p>This is me, my truesona! He's a dog, very fat and large, only wears cargo shorts <i>(like me)</i>. He's basically me in form of a dog.</p>
+                        <a href="https://i.imgur.com/GW3JlTU.png" target="_blank" class="btnSection">Link refSheet</a>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <h1>Darkon the Dragon</h1>
+                        <div class="banner">
+                            <img src="https://i.imgur.com/dTbK1Wx.png" class="lookAtMouse">
+                        </div>
+                        <div class="tags">
+                            <a>boxer</a>
+                            <a>dragon</a>
+                            <a>fat</a>
+                            <a>strong</a>
+                        </div>
+                        <p>Darkon is a boxer around town in ZoniaLabs. He wears his straps for safety, <i>something could go very wrong if that were teared apart.</i></p>
+                        <a href="https://i.imgur.com/dTbK1Wx.png" target="_blank" class="btnSection">Link refSheet</a>
+                    </section>
+                </section>
+                <section id="tab-links" class="content-row">
+                    <section class="containerBox">
+                        <h1>Links Section</h1>
+                        <p>Every social media I currently have! <strong>Be aware</strong> of anyone trying to impersonate me, it is fake af.</p>
+                    </section>
+                    <hr>
+                    <section class="containerBox">
+                        <div class="links">
+                            <a href="https://darkgreyrai.bsky.social" target="_blank">
+                                <img src="https://cdn.simpleicons.org/bluesky/F5F5F5" alt="Bluesky">
+                                <p>Bluesky</p>
+                            </a>
+                            <a href="https://trello.com/b/5Y8zofkp/zoniacomms" target="_blank">
+                                <img src="https://cdn.simpleicons.org/trello/F5F5F5" alt="Trello">
+                                <p>Trello</p>
+                            </a>
+                            <a href="https://www.roblox.com/users/2541819975/profile" target="_blank">
+                                <img src="https://cdn.simpleicons.org/roblox/F5F5F5" alt="ROBLOX">
+                                <p>ROBLOX</p>
+                            </a>
+                            <a href="https://www.tiktok.com/@darkgreyrai" target="_blank">
+                                <img src="https://cdn.simpleicons.org/tiktok/F5F5F5" alt="TikTOk">
+                                <p>TikTok</p>
+                            </a>
+                            <a href="https://open.spotify.com/user/ovp1b34zip9t2kllhsdt6c5v0" target="_blank">
+                                <img src="https://cdn.simpleicons.org/spotify/F5F5F5" alt="Spotify">
+                                <p>Spotify</p>
+                            </a>
+                            <a href="https://steamcommunity.com/id/darkgreyrai/" target="_blank">
+                                <img src="https://cdn.simpleicons.org/steam/F5F5F5" alt="Steam">
+                                <p>Steam</p>
+                            </a>
+                            <a href="https://t.me/+kYZV9k9Cx6g4ODE5" target="_blank">
+                                <img src="https://cdn.simpleicons.org/telegram/F5F5F5" alt="Telegram">
+                                <p>Telegram</p>
+                            </a>
+                            <a href="https://retroachievements.org/user/Darkgrey" target="_blank">
+                                <img src="https://cdn.simpleicons.org/retroachievements/F5F5F5" alt="RetroAchievements">
+                                <p>RTRAchv</p>
+                            </a>
+                        </div>
+                    </section>
+                </section>
+            </article>
         </section>
     </main>
-    <footer>
-		<small>- <span id="year"></span> &copy; ZoniaLabs -</small>
-	</footer>
     <script src="https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js"></script>
     <script src="./script.js"></script>
-    <audio id="audio" src="./assets/sounds/spookyyy.mp3"></audio>
+    <audio id="audio" src="./assets/sounds/splat.mp3"></audio>
 </body>
 </html>

@@ -1,8 +1,10 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* Switch Button */
+
 function showTab(name) {
-    const tabs = document.querySelectorAll('main section');
-    
+    const tabs = document.querySelectorAll('article section.content-row');
+
     tabs.forEach(tab => {
         tab.classList.remove('active');
     });
@@ -11,6 +13,8 @@ function showTab(name) {
     if (target) {
         target.classList.add('active');
     }
+
+    document.getElementById('dropMenu').classList.remove('show');
 }
 
 function dropFunc() {
@@ -29,12 +33,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const titulo = document.getElementById('silly');
     titulo.addEventListener('click', () => {
-        const sfx = new Audio('./assets/sounds/spookyyy.mp3');
+        const sfx = new Audio('./assets/sounds/splat.mp3');
         sfx.play();
         sfx.volume = 0.2;
     });
 });
-/*
+
+/* Theme Selector */
+
 const themes = {
     dragon: {
         '--color-white': '#F5F5F5',
@@ -43,7 +49,7 @@ const themes = {
         '--color-secondary': '#333AA5',
         '--color-accent': '#293097',
         '--color-dark': '#202678',
-        '--color-black': '#202020',
+        '--color-black': '#202020'
     },
     dog: {
         '--color-white': '#F9F3EF',
@@ -113,7 +119,68 @@ window.addEventListener('load', function() {
     applyTheme(currentTheme);
     updateThemeButton();
 });
-*/
+
+/* img Look */
+
+document.querySelectorAll('.lookAtMouse').forEach(img => {
+    const maxTilt = 15;
+
+    img.addEventListener('mousemove', (e) => {
+        const rect = img.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        img.style.transform =
+            `perspective(600px) rotateX(${-y * maxTilt}deg) rotateY(${x * maxTilt}deg) scale(1.2)`;
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.style.transform = '';
+    });
+});
+
+/* Avatar */
+
+const images = [
+    "https://i.imgur.com/oJjxLAK.png",     // Dog
+    "https://i.imgur.com/mWzDajl.png",     // Darkon
+    "https://i.imgur.com/1fXFGYN.png",     // Nebulon
+    "https://i.imgur.com/MchxPVW.png",     // Rogy
+    "https://i.imgur.com/arJzBCL.png",     // Rygar
+    "https://i.imgur.com/0mRuaJu.png",     // Deer
+    "https://i.imgur.com/L0fGFwe.png",     // Zombie Dog
+    "https://i.imgur.com/ztXYTuU.png",     // Darkon
+    "https://i.imgur.com/AYw6AOp.png",     // Deer
+    "https://i.imgur.com/kQMQeeu.png",     // Dog
+    "https://i.imgur.com/PPHGk2k.png",     // Nebulon
+    "https://i.imgur.com/EDMVBcA.png",     // Rogy
+    "https://i.imgur.com/sQGoQha.png",     // Rygar
+    "https://i.imgur.com/wDGXV5u.png",     // Zombie Dog
+]
+
+const texts = [
+    "'I should get some nuggies.. I'm hungry....'",
+    "'*BAKR BRAK BARK BRK RRRRRFFF RRRRRFFF* oh shit sorry.....'",
+    "'I mean look, not everything has be violen- Oh god.'",
+    "'*bite your leg* Oh sorry...'",
+    "'Did you know that in Super Sm- wait I can'y that.'",
+    "'Must I do everything in here!?'",
+    "':steam_happi:'",
+    "'Ouch, right in the gut..! God damnit Deer!'",
+]
+
+const randomInd = Math.floor(Math.random() * images.length);
+
+const elementImg = document.getElementById("avatar-random");
+elementImg.src = images[randomInd];
+
+const randomIndTxt = Math.floor(Math.random() * texts.length);
+
+const elementTxt = document.getElementById("text-random");
+elementTxt.textContent = texts[randomIndTxt];
+
+/* Shuffle Gallery */
+
 const gallery = [
     "https://i.imgur.com/7g1H5IK.gif", // Cloud
     "https://i.imgur.com/DBBlXff.gif", // D4RK
@@ -127,68 +194,6 @@ const gallery = [
     "https://i.imgur.com/HCtY4Qf.gif", // Sny
     "https://i.imgur.com/ABDdoWz.gif"  // Snywy
 ]
-
-/*
-const images = [
-    "https://i.imgur.com/oJjxLAK.png",   // Dog
-    "https://i.imgur.com/mWzDajl.png",   // Darkon
-    "https://i.imgur.com/1fXFGYN.png",   // Nebulon
-    "https://i.imgur.com/MchxPVW.png",   // Rogy
-    "https://i.imgur.com/arJzBCL.png",   // Rygar
-    "https://i.imgur.com/0mRuaJu.png",   // Deer
-    "https://i.imgur.com/L0fGFwe.png",   // Zombie Dog
-]
-
-const desc = [
-    "Dog smiling to the camera.",
-    "Darkon smiling to the camera.",
-    "Nebulong pondering on space.",
-    "Rogy looking aside to a bird.",
-    "Rygar rushing hour.",
-    "Deer with a nice grim.",
-    "Zombie dog bleping at you."
-]
-*/
-
-const images = [
-    "https://i.imgur.com/ztXYTuU.png",     // Darkon
-    "https://i.imgur.com/AYw6AOp.png",     // Deer
-    "https://i.imgur.com/kQMQeeu.png",     // Dog
-    "https://i.imgur.com/PPHGk2k.png",     // Nebulon
-    "https://i.imgur.com/EDMVBcA.png",     // Rogy
-    "https://i.imgur.com/sQGoQha.png",     // Rygar
-    "https://i.imgur.com/wDGXV5u.png",     // Zombie Dog
-]
-
-const desc = [
-    "Darkon with a grim.",
-    "Deer sleeping on the bed.",
-    "Dog being very happy.",
-    "Nebulon bleping at you.",
-    "Rogy smiling at you.",
-    "Rygar balacing on one leg.",
-    "Zombie dog with a machete on his mouth.",
-]
-
-const texts = [
-    "'IT'S DAH SPOOKY MONTH!1!!!1!!!'",
-    "'Cannnn I have candies? (steals) OOPSS!'",
-    "'Check this out- OH GOD *falls*'",
-    "'Hah, prank him John. WHAT THE---'",
-    "'*dances* Wait there is nothing playing.. man...'",
-    "'Ooh piece of candy! Ooh piece of candy! Ooh piece of candy! Ooh piece of candy! OH GOD THERE'S A LOT OF PIECES OF CANDY!!'",
-]
-
-const randomInd = Math.floor(Math.random() * images.length);
-
-const elementImg = document.getElementById("avatar-random");
-elementImg.src = images[randomInd];
-elementImg.alt = desc[randomInd];
-
-const randomIndTxt = Math.floor(Math.random() * texts.length);
-
-const elementTxt = document.getElementById("text-random");
-elementTxt.textContent = texts[randomIndTxt];
 
 const randomGal = Math.floor(Math.random() * gallery.length);
 
@@ -219,7 +224,10 @@ function shuffleGallery() {
         imgElement.src = shuffledGallery[index % shuffledGallery.length];
     });
 }
+
 document.getElementById('shuffleBtn').addEventListener('click', shuffleGallery);
+
+/* Mousetraps */
 
 var weird = new Audio('./assets/sounds/weirdroutejingle.mp3');
 weird.preload = 'auto';
@@ -231,56 +239,58 @@ yay.volume = 0.2;
 
 Mousetrap.bind('z o n i a', function() {
     weird.play();
-    alert("She do the work here. You should know her someday.");
-})
-
-const button = document.getElementById("randomNum");
-const spookySound = new Audio('./assets/sounds/witchesOOOO.mp3');
-const numTarget = 87;
-
-button.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const number = Math.floor(Math.random() * 100) + 1;
-    button.textContent = number;
-
-    if (number === numTarget) {
-        spookySound.currentTime = 0;
-        spookySound.play();
-    }
+    alert("She does the work here. You should know her someday.");
 });
 
-/*
-function startCountdown(month, day) {
-    const element = document.getElementById('countdown');
+Mousetrap.bind('d a r k o n', function() {
+    weird.play();
+    alert("The heck you are poking me? Wanna fight?");
+});
 
-    const interval = setInterval(() => {
-        const now = new Date();
-        let currentYear = now.getFullYear();
+Mousetrap.bind('d e e r', function() {
+    weird.play();
+    alert("Alright.. now you have done it.");
+});
 
-        let birthday = new Date(currentYear, month - 1, day);
+Mousetrap.bind('n e b u l o n', function() {
+    weird.play();
+    alert("*sad plushies noises* (You messed all of his stars alignment.)");
+});
 
-        if (now > birthday) {
-            birthday = new Date(currentYear + 1, month - 1, day);
-        }
+Mousetrap.bind('r y g a r', function() {
+    weird.play();
+    alert("H-hey! Don't touch my turbines please.. they will break!");
+});
 
-        const difference = birthday - now;
+Mousetrap.bind('r o g y', function() {
+    weird.play();
+    alert("Buddy hey.. my belly is not a balloon...");
+});
 
-        if (difference <= 0) {
-            clearInterval(interval);
-            element.innerHTML = "Today is the big day! It mah birthday!";
-            return;
-        }
+/* Mousetrap easter egg: p a w */
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+const eggImg = document.createElement('img');
+eggImg.className = 'pawb';
+eggImg.src = 'https://i.imgur.com/L8tv2vf.png';
+eggImg.alt = '';
+document.body.appendChild(eggImg);
 
-        element.innerHTML = `< ${days}d ${hours}h ${minutes}m ${seconds}s >`;
+var vineBoom = new Audio('./assets/sounds/vine-boom-low-quality.mp3');
+vineBoom.preload = 'auto';
+vineBoom.volume = 0.6;
 
-    }, 1000);
-}
+let eggAnim = null;
 
-startCountdown(9, 11);
-*/
+Mousetrap.bind('p a w', () => {
+    vineBoom.play();
+    if (eggAnim) eggAnim.cancel();
+
+    eggAnim = eggImg.animate(
+        [
+            { opacity: 1 },
+            { opacity: 1, offset: 0.15 },
+            { opacity: 0 }
+        ],
+        { duration: 1200, easing: 'ease-out' }
+    );
+});
