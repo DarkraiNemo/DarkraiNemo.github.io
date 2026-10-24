@@ -274,13 +274,16 @@ hr {
     text-align: center;
 }
 
-.animated-gradient {
+.gradient {
     background: var(--color-main);
     background: linear-gradient(90deg, var(--color-main) 0%, var(--color-white) 25%, var(--color-light) 49%, var(--color-secondary) 75%, var(--color-dark) 100%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.gradient:hover {
     animation: flow 4s linear infinite;
 }
 
@@ -372,6 +375,31 @@ hr {
     object-fit: fill;
     z-index: 9999;
     pointer-events: none;
+    opacity: 0;
+}
+
+.minigames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5%;
+}
+
+.gameBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 218px;
+    height: 218px;
+    overflow: auto;
+    background-color: var(--color-black);
+    padding: 3px;
+    transition: opacity 0.3s;
+    -webkit-box-shadow: 0px 7px 15px 1px rgba(31,31,31,0.4); 
+    box-shadow: 0px 7px 15px 1px rgba(31,31,31,0.4);
+}
+
+.gameBox.fade-out {
     opacity: 0;
 }
 
@@ -469,5 +497,9 @@ hr {
 
     .galleryRef {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .minigames {
+        display: none;
     }
 }

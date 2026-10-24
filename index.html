@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./assets/css/minigames.css">
     <link rel="icon" type="image/x-icon" href="./zonialogo.svg">
     <title>zoniasite_</title>
 </head>
@@ -17,7 +18,7 @@
             <aside>
                 <div class="container">
                     <header>
-                        <h1 class="animated-gradient" id="silly">ZoniaSite</h1>
+                        <h1 class="gradient" id="silly">ZoniaSite_</h1>
                         <div class="containerBtn">
                             <button onclick="dropFunc()" class="dropbtn" style="font-size: 18px">LabMenu_</button>
                             <div id="dropMenu" class="dropdown-content">
@@ -31,7 +32,13 @@
                     </header>
                     <div class="content">
                         <img id="avatar-random" src="./assets/imgs/darkonSmiling.gif" alt="Darkon Smiling" class="lookAtMouse">
-                        <p id="text-random" class="codeblock">"Weird.. something should be on here.. Let me reboot my systems.."</p>
+                        <p id="text-random" class="codeblock" style="font-size: 14px;">"Weird.. something should be on here.. Let me reboot my systems.."</p>
+                        <section class="minigames">
+                            <section id="game" class="gameBox">
+                                <p>loading..</p>
+                            </section>
+                            <button id="nextGame" class="btnSection">next game</button>
+                        </section>
                         <footer>
                             <small>- <span id="year"></span> &copy; ZoniaLabs -</small>
                         </footer>
@@ -132,6 +139,7 @@
                             <img class="lookAtMouse" src="https://i.imgur.com/WtCdZ9t.png">
                             <img class="lookAtMouse" src="https://i.imgur.com/truoSqO.png">
                             <img class="lookAtMouse" src="https://i.imgur.com/mRH1qGM.png">
+                            <img class="lookAtMouse" src="https://i.imgur.com/4DVEXC6.png">
                         </div>
                     </section>
                     <hr>
@@ -279,6 +287,8 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/mousetrap@1.6.5/mousetrap.min.js"></script>
     <script src="./script.js"></script>
-    <audio id="audio" src="./assets/sounds/splat.mp3"></audio>
+    <script src="./assets/scripts/game.js"></script>
+    <audio src="./assets/sounds/splat.mp3"></audio>
+    <audio src="./assets/sounds/minecraft-dog-bark.mp3"></audio>
 </body>
 </html>
